@@ -1,3 +1,6 @@
+/**
+ * Color enum
+ */
 var Color;
 (function (Color) {
     Color["RED"] = "bg-red-900";
@@ -6,6 +9,12 @@ var Color;
     Color["YELLOW"] = "bg-yellow-400";
     Color["ORANGE"] = "bg-yellow-900";
 })(Color || (Color = {}));
+/**
+ * Dot class
+ * @param color Color
+ * @param index number
+ * @returns Dot
+ */
 var Dot = /** @class */ (function () {
     function Dot(color, index) {
         if (index === void 0) { index = 0; }
@@ -90,7 +99,6 @@ var Wall = /** @class */ (function () {
         if (belowIndex >= this.count) {
             return null;
         }
-        console.log(this.dots);
         return this.dots[belowIndex];
     };
     Wall.prototype.generateDot = function (dot, wrapper) {

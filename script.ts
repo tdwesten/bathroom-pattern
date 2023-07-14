@@ -1,3 +1,6 @@
+/**
+ * Color enum
+ */
 enum Color {
 	RED = "bg-red-900",
 	BLUE = "bg-sky-700",
@@ -6,6 +9,12 @@ enum Color {
 	ORANGE = "bg-yellow-900",
 }
 
+/**
+ * Dot class
+ * @param color Color
+ * @param index number
+ * @returns Dot
+ */
 class Dot {
 	public color: Color;
 	public index: number;
@@ -126,8 +135,6 @@ class Wall {
 		if (belowIndex >= this.count) {
 			return null;
 		}
-
-		console.log(this.dots);
 
 		return this.dots[belowIndex];
 	}
